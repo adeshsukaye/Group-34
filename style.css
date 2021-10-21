@@ -1,0 +1,365 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Css Variables */
+
+:root {
+    --navbar-height: 5px;
+}
+
+
+/* NavBar Section */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+}
+
+#navbar::before {
+    position: absolute;
+    content: "";
+    background-color: #343a40;
+    height: 85%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.5; */
+    top: 0px;
+    left: 0px;
+}
+
+
+/* Logo */
+
+#logo img {
+    height: 75px;
+    margin: 6px 9px;
+}
+
+
+/* Navigation Bar :List Styling */
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+ul li a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1rem;
+    padding: 3px 15px;
+    /* display: block; */
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: #fff;
+}
+
+
+/* Buttons */
+
+#buttons a {
+    position: relative;
+    left: 285px;
+    padding: 8px 25px;
+    font-size: 1.1rem;
+    border-radius: 11px;
+    border: 2px solid white;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+}
+
+#buttons a:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* Home Section */
+
+#home {
+    /* background-color: red; */
+    height: 650px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 3px 200px; */
+}
+
+#home .home-left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    /* justify-content: end; */
+    position: relative;
+    left: -336px;
+    bottom: -91px;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+}
+#home .home-right {
+    font-size: 45px;
+    color: white;
+}
+
+#home::before {
+    content: "";
+    background: url(../images/home/Home1.jpg) no-repeat center center/cover;
+    height: 750px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    position: absolute;
+    opacity: 0.9;
+}
+
+
+/* services section */
+
+#service-container {
+    margin-top: 527px;
+    /* z-index: -1; */
+}
+
+#service1 .box1 img {
+    width: 100%;
+    height: 100%;
+    margin: 15px 0px;
+}
+
+#services {
+    display: flex;
+    margin: 2px 18px;
+}
+
+#services .box {
+    border: 2px solid brown;
+    background-color: #e5e0da;
+    padding: 20px;
+    margin: 37px;
+    border-radius: 30px;
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+    border-radius: 18px;
+}
+
+
+/* partnerships */
+
+#PartnerShips .box img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* FAQ-Section */
+
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+#faq {
+    font-family: 'Muli', sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100px;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+h1 {
+    align-items: center;
+    padding: 30px 0;
+}
+
+.faq {
+    position: relative;
+    border: 1px solid grey;
+    padding: 30px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.faq.active::before,
+.faq.active::after {
+    content: "\f075";
+    font-family: "Font Awesome 5 free";
+    color: teal;
+    font-size: 7rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.faq.active::before {
+    top: -30px;
+    left: -30px;
+    transform: rotateY(180deg);
+    color: rebeccapurple;
+}
+
+.faq .faq-text {
+    display: none;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 24px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+}
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    display: block;
+    color: #fff;
+}
+
+.faq.active .faq-toggle {
+    background-color: grey;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+
+/* Contact Section */
+
+#contact {
+    position: relative;
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    /* background: url("contact.jpg") no-repeat center center/cover; */
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+#contact .contact-left {
+    padding: 85px;
+}
+
+.contact-us {
+    font-size: 3rem;
+    margin: 15px auto;
+}
+
+.tel p {
+    margin: 15px auto;
+}
+
+.email a {
+    margin: 15px auto;
+    color: #dc3545;
+}
+
+.social {
+    margin: 23px auto;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+#contact .contact-right {
+    overflow: hidden;
+}
+
+#contact .contact-right img {
+    height: 428px;
+    margin: 0 92px;
+}
+
+
+/* Footer Section */
+
+footer p {
+    align-items: center;
+    font-size: 1.1rem;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* utility Classes */
+
+.h-primary {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.h-secondary {
+    font-size: 1.8rem;
+    padding: 12px;
+}
+
+.center {
+    text-align: center;
+}

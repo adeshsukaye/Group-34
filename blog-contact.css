@@ -1,0 +1,27 @@
+/* Content Section */
+
+.contact-content {
+    height: 110vh;
+    /* background-color: #ccd0ed; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-content::after {
+    content: '';
+    background: url(../images/blog-img/11.svg) no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: inherit;
+    z-index: -1;
+    opacity: 0.15;
+    border-radius: 12px;
+}
+
+.contact-content h1 {
+    margin-top: 0px;
+}
